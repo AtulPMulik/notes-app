@@ -92,6 +92,7 @@ export const Ul = styled.ul`
   display: flex;
   padding-left: 0px;
   flex-wrap: wrap;
+  list-style-type: none;
 
   @media (min-height: 768px) {
     display: flex;

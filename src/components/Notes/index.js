@@ -53,7 +53,7 @@ const Notes = () => {
   )
 
   const renderNotesItemSec = () => (
-    <Ul type="none">
+    <Ul>
       {notesArray.map(eachItem => (
         <NoteItem key={eachItem.id} noteDetails={eachItem} />
       ))}

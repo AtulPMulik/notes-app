@@ -29,8 +29,14 @@ const Notes = () => {
       noteText: notes,
     }
     addToArray(prevState => [...prevState, newNote])
+
     changeTitle('')
     addNotes('')
+  }
+
+  const onRemoveItems = id => {
+    const updatedList = notesArray.filter(each => each.id !== id)
+    addToArray(updatedList)
   }
 
   const onChangeTitleInput = event => {
@@ -55,12 +61,14 @@ const Notes = () => {
   const renderNotesItemSec = () => (
     <Ul>
       {notesArray.map(eachItem => (
-        <NoteItem key={eachItem.id} noteDetails={eachItem} />
+        <NoteItem
+          key={eachItem.id}
+          noteDetails={eachItem}
+          onRemoveItems={onRemoveItems}
+        />
       ))}
     </Ul>
   )
-
-  console.log(notesArray)
 
   return (
     <NotesPage>

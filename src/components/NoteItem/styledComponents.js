@@ -8,6 +8,7 @@ export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: ${props => props.bgColor};
 
   @media (max-height: 767px) {
     height: 160px;
@@ -29,23 +30,32 @@ export const ListTitle = styled.h1`
   color: #1e293b;
   font-weight: bold;
   font-family: Bree Serif;
-
+  color: white;
+  text-decoration: underline;
+  letter-spacing: 1px;
   @media (max-height: 767px) {
-    height: 10px;
+    height: 0px;
     margin: 10px;
-    margin-bottom: 5px;
+    font-size: 14px;
   }
   @media (min-height: 768px) {
     height: 10px;
     margin: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 25px;
+  }
+  @media (orientation: landscape) {
+    font-size: 25px;
+    margin-bottom: 10px;
   }
 `
 export const Text = styled.p`
   font-size: 16px;
-  color: #334155;
+  color: white;
+  font-weight: 600px;
   padding: 10px;
+  font-style: italic;
+
   @media (max-height: 767px) {
     font-size: 10px;
   }

@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import NoteItem from '../NoteItem'
 import {
@@ -17,9 +17,13 @@ import {
 } from './styledComponents'
 
 const Notes = () => {
+  const storedData = JSON.parse(localStorage.getItem('key'))
+
   const [title, changeTitle] = useState('')
   const [notes, addNotes] = useState('')
-  const [notesArray, addToArray] = useState([])
+  const [notesArray, addToArray] = useState(
+    storedData !== null > 1 ? storedData : [],
+  )
 
   const onSubmitToAddNote = event => {
     event.preventDefault()
@@ -33,6 +37,11 @@ const Notes = () => {
     changeTitle('')
     addNotes('')
   }
+
+  useEffect(() => {
+    localStorage.setItem('key', JSON.stringify(notesArray))
+    console.log('Item is stored in local storage')
+  })
 
   const onRemoveItems = id => {
     const updatedList = notesArray.filter(each => each.id !== id)

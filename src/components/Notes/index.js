@@ -22,7 +22,7 @@ const Notes = () => {
   const [title, changeTitle] = useState('')
   const [notes, addNotes] = useState('')
   const [notesArray, addToArray] = useState(
-    storedData !== null > 1 ? storedData : [],
+    storedData !== null ? storedData : [],
   )
 
   const onSubmitToAddNote = event => {

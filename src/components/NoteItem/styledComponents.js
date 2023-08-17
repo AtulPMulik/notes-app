@@ -7,6 +7,7 @@ export const ListItem = styled.li`
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
   background-color: ${props => props.bgColor};
 
@@ -73,4 +74,15 @@ export const CardBtn = styled.button`
   cursor: pointer;
   border-bottom-left-radius: 8px;
   border-top-right-radius: 8px;
+`
+export const Time = styled.p`
+  color: white;
+  font-style: italic;
+  font-size: 12px;
+  align-self: flex-end;
+  text-decoration: underline;
+
+  @media (min-height: 768px) {
+    font-size: 16px;
+  }
 `

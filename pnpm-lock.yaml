@@ -8,6 +8,7 @@ specifiers:
   '@testing-library/react': 12.1.2
   '@testing-library/user-event': 13.5.0
   babel-plugin-styled-components: 2.0.2
+  date-fns: 2.30.0
   enzyme: 3.11.0
   eslint: 8.5.0
   eslint-config-airbnb: 18.2.1
@@ -31,6 +32,7 @@ dependencies:
   '@testing-library/jest-dom': 5.16.1
   '@testing-library/react': 12.1.2_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.5.0
+  date-fns: 2.30.0
   enzyme: 3.11.0
   jest-styled-components: 7.0.8_styled-components@5.3.3
   react: 17.0.2
@@ -3017,7 +3019,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@babel/code-frame': 7.22.10
-      '@babel/runtime': 7.14.8
+      '@babel/runtime': 7.22.10
       '@types/aria-query': 5.0.1
       aria-query: 5.1.3
       chalk: 4.1.0
@@ -5071,6 +5073,13 @@ packages:
       whatwg-url: 8.7.0
     dev: false
 
+  /date-fns/2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
+    engines: {node: '>=0.11'}
+    dependencies:
+      '@babel/runtime': 7.22.10
+    dev: false
+
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     dependencies:
@@ -6635,7 +6644,7 @@ packages:
   /history/4.10.1:
     resolution: {integrity: sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==}
     dependencies:
-      '@babel/runtime': 7.14.8
+      '@babel/runtime': 7.22.10
       loose-envify: 1.4.0
       resolve-pathname: 3.0.0
       tiny-invariant: 1.3.1
@@ -10010,7 +10019,7 @@ packages:
     peerDependencies:
       react: '>=15'
     dependencies:
-      '@babel/runtime': 7.14.8
+      '@babel/runtime': 7.22.10
       history: 4.10.1
       hoist-non-react-statics: 3.3.2
       loose-envify: 1.4.0

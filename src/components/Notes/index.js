@@ -16,6 +16,17 @@ import {
   Ul,
 } from './styledComponents'
 
+const colorList = [
+  'red',
+  'green',
+  'yellow',
+  'blue',
+  'grey',
+  'orange',
+  'black',
+  'khaki',
+]
+
 const Notes = () => {
   const storedData = JSON.parse(localStorage.getItem('key'))
 
@@ -24,13 +35,20 @@ const Notes = () => {
   const [notesArray, addToArray] = useState(
     storedData !== null ? storedData : [],
   )
+  const [date] = useState(new Date())
 
   const onSubmitToAddNote = event => {
     event.preventDefault()
+
+    const randomIndex = Math.ceil(Math.random() * colorList.length - 1)
+    const randomColor = colorList[randomIndex]
+
     const newNote = {
       id: uuidv4(),
       noteTitle: title,
       noteText: notes,
+      createdData: date.toDateString(),
+      color: randomColor,
     }
     addToArray(prevState => [...prevState, newNote])
 
